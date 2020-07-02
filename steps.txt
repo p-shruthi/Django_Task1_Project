@@ -1,0 +1,57 @@
+I have done the Django Task one project by using the below steps.
+
+1.Setup virtual environment using Anaconda Package Manager:
+
+$ conda create --name demo_env
+
+2. Check the recently created virutal environment.
+
+(base) C:\Users\putlu>conda info --envs
+# conda environments:
+#
+base                  *  C:\Users\putlu\anaconda3
+NewProject1              C:\Users\putlu\anaconda3\envs\NewProject1
+Tic_Tac_Toe              C:\Users\putlu\anaconda3\envs\Tic_Tac_Toe
+demo_env                 C:\Users\putlu\anaconda3\envs\demo_env
+django_ecommerce         C:\Users\putlu\anaconda3\envs\django_ecommerce
+django_env               C:\Users\putlu\anaconda3\envs\django_env
+
+3. Activate Virtual Environment
+
+(base) C:\Users\putlu>conda activate demo_env
+
+4. Creating the Django Project.
+
+(demo_env) C:\Users\putlu\Django_Projects>django-admin startproject Django_Task_One_Project
+
+5. Creating the requirements.txt file
+
+(demo_env) C:\Users\putlu\Django_Projects\Django_Task_One_Project>pip freeze
+certifi==2020.4.5.1
+Django==2.0.5
+mysqlclient==1.4.6
+numpy==1.19.0
+pytz==2020.1
+wincertstore==0.2
+
+(demo_env) C:\Users\putlu\Django_Projects\Django_Task_One_Project>pip freeze > requirements.txt
+
+6. Adding pandas version in requirements.txt file and install it.
+
+(demo_env) C:\Users\putlu\Django_Projects\Django_Task_One_Project>pip install -r requirements.txt
+Requirement already satisfied: certifi==2020.4.5.1 in c:\users\putlu\anaconda3\envs\demo_env\lib\site-packages (from -r requirements.txt (line 1)) (2020.4.5.1)
+Requirement already satisfied: Django==2.0.5 in c:\users\putlu\anaconda3\envs\demo_env\lib\site-packages (from -r requirements.txt (line 2)) (2.0.5)
+Requirement already satisfied: mysqlclient==1.4.6 in c:\users\putlu\anaconda3\envs\demo_env\lib\site-packages (from -r requirements.txt (line 3)) (1.4.6)
+Requirement already satisfied: numpy==1.19.0 in c:\users\putlu\appdata\roaming\python\python37\site-packages (from -r requirements.txt (line 4)) (1.19.0)
+Requirement already satisfied: pytz==2020.1 in c:\users\putlu\anaconda3\envs\demo_env\lib\site-packages (from -r requirements.txt (line 5)) (2020.1)
+Requirement already satisfied: wincertstore==0.2 in c:\users\putlu\anaconda3\envs\demo_env\lib\site-packages (from -r requirements.txt (line 6)) (0.2)
+Collecting pandas==1.0.5
+  Downloading pandas-1.0.5-cp37-cp37m-win_amd64.whl (8.7 MB)
+     |████████████████████████████████| 8.7 MB 6.4 MB/s
+Collecting python-dateutil>=2.6.1
+  Using cached python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting six>=1.5
+  Using cached six-1.15.0-py2.py3-none-any.whl (10 kB)
+Installing collected packages: six, python-dateutil, pandas
+Successfully installed pandas-1.0.5 python-dateutil-2.8.1 six-1.15.0
+
